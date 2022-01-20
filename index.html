@@ -11,7 +11,27 @@
 </head>
 <body>
     <div id="app">
-        
+        <!-- inizio header -->
+        <header>
+            <div class="logo">
+                <img src="style/img/Cattura.JPG" alt="Logo">
+            </div>
+        </header>
+        <!-- fine header -->
+        <!-- inizio main -->
+        <main>
+            <div class="container">
+                <div v-for="disco in dischi" class="card">
+                    <div class="img">
+                        <img :src="disco.poster" :alt="disco.title">
+                    </div>
+                    <h4>{{disco.title}}</h4>
+                    <h5>{{disco.author}}</h5>
+                    <h5>{{disco.year}}</h5>
+                </div>
+            </div>
+        </main>
+        <!-- fine main -->
     </div>
 
     <script src="js/main.js"></script>
