@@ -21,7 +21,20 @@
         <!-- inizio main -->
         <main>
             <div class="container">
-                <div v-for="disco in dischi" class="card">
+                <div class="select-genre">
+                    <select @change="selectByGenre()" v-model="genre" name="Genre" id="Genre">
+                        <option v-for="disco in dischi" :value="disco.genre">{{disco.genre}}</option>
+                    </select>
+                </div>
+                <div v-for="disco in dischi" class="card" v-show="dischi2.length == 0">
+                    <div class="img">
+                        <img :src="disco.poster" :alt="disco.title">
+                    </div>
+                    <h4>{{disco.title}}</h4>
+                    <h5>{{disco.author}}</h5>
+                    <h5>{{disco.year}}</h5>
+                </div>
+                <div v-for="disco in dischi2" class="card" v-show="dischi2.length != 0">
                     <div class="img">
                         <img :src="disco.poster" :alt="disco.title">
                     </div>

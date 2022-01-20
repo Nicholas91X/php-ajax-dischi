@@ -29,6 +29,13 @@ main {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.select-genre {
+    position: absolute;
+    left: 50%;
+    top: 10px;
 }
 
 .card {
