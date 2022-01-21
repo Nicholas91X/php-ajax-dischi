@@ -23,6 +23,7 @@
             <div class="container">
                 <div class="select-genre">
                     <select @change="selectByGenre()" v-model="genre" name="Genre" id="Genre">
+                        <option value="All">All</option>
                         <option v-for="disco in dischi" :value="disco.genre">{{disco.genre}}</option>
                     </select>
                 </div>
